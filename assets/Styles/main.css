@@ -28,21 +28,53 @@ body {
     width: 1170px;
   }
 }
+img{
+  width: 100%;
+}
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
 }
+header{
+  position: absolute;
+  width: 100%;
+  padding: 25px;
+
+}
 header .container {
   display: flex;
   justify-content: space-between;
-  padding: 25px 0;
+  align-items: center;
+  position: relative;
+}
+header .container::after{
+  content: "";
+  width: calc(100% - 30px);
+  bottom: -20px;
+  position: absolute;
+  border: 1px solid gray;
 }
 header .container nav ul {
   display: flex;
 }
 header .container nav ul li {
-  padding: 0 25px;
   text-transform: capitalize;
+  color: white;
+  font-weight: 600;
+  padding: 0 25px;
+
+}
+@media (max-width:991px) {
+  header .container nav{
+    display: none;
+  }
+}
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../images/landing.jpg);
+  background-position: center;
+  background-size: cover;
 }
