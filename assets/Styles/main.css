@@ -6,6 +6,9 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  font-family: "Open Sans", sans-serif;
+}
 .container {
   padding: 0 15px;
   margin: auto;
@@ -24,4 +27,22 @@ html {
   .container {
     width: 1170px;
   }
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+header .container nav ul {
+  display: flex;
+}
+header .container nav ul li {
+  padding: 0 25px;
+  text-transform: capitalize;
 }
