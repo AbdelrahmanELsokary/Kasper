@@ -28,7 +28,7 @@ body {
     width: 1170px;
   }
 }
-img{
+img {
   width: 100%;
 }
 ul {
@@ -37,11 +37,11 @@ ul {
 a {
   text-decoration: none;
 }
-header{
+header {
   position: absolute;
   width: 100%;
   padding: 25px;
-
+  z-index: 10;
 }
 header .container {
   display: flex;
@@ -49,7 +49,7 @@ header .container {
   align-items: center;
   position: relative;
 }
-header .container::after{
+header .container::after {
   content: "";
   width: calc(100% - 30px);
   bottom: -20px;
@@ -59,17 +59,37 @@ header .container::after{
 header .container nav ul {
   display: flex;
 }
-header .container nav ul li {
+header .container nav ul li .home {
+  color: #19c8fa;
+  position: relative;
+}
+header .container nav ul li .home::before {
+  content: "";
+  position: absolute;
+  top: 49px;
+  right: 8px;
+  z-index: 4;
+  width: 80px;
+  border: 1px solid;
+}
+header .container nav ul li a {
+  display: block;
   text-transform: capitalize;
   color: white;
   font-weight: 600;
   padding: 0 25px;
-
 }
-@media (max-width:991px) {
-  header .container nav{
+header .container nav ul li a:hover {
+  color: #19c8fa;
+  transition: 0.7s;
+}
+@media (max-width: 991px) {
+  header .container nav {
     display: none;
   }
+}
+.hero * {
+  z-index: 100;
 }
 .hero {
   width: 100%;
@@ -77,4 +97,18 @@ header .container nav ul li {
   background-image: url(../images/landing.jpg);
   background-position: center;
   background-size: cover;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.614);
+}
+.hero .hello_world{
+width: 50%;
+height: 100vh;
+display: flex;
+color: #ffffff;
+align-items: center;
 }
